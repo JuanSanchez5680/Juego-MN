@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 8430043934063190245}
   - component: {fileID: 8430043934063190246}
   - component: {fileID: 8430043934063190247}
+  - component: {fileID: 8064131146528254494}
+  - component: {fileID: 3891425534079498811}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -188,13 +190,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593a431be141d25489d7d5e92eba3bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpableGround:
+  Suelo:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 8
-  jumpForce: 6
-  maxJumps: 1
-  jumpSoundEffect: {fileID: 8430043934063190245}
+  Velocidad: 8
+  FuerzaDeSalto: 6
+  SaltosMaximos: 1
+  SonidoDeSalto: {fileID: 8430043934063190245}
+  TextoDePosicion: {fileID: 0}
 --- !u!114 &8430043934063190251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,13 +210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c305ad17aaede124c9c11e9631ff970d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitTexts:
+  TextoDeFrutas:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  scoreText: {fileID: 0}
-  collectionSoundEffect: {fileID: 8430043934063190246}
-  fruitValues: 0f000000190000000a000000
+  TextoPuntosTotal: {fileID: 0}
+  SonidoDeColeccion: {fileID: 8430043934063190246}
+  ValorDeFrutas: 0a000000140000001e000000
 --- !u!114 &8430043934063190244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7cd101caa8c41b4493ff49b34f09a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Deathsoundeffect: {fileID: 8430043934063190247}
+  SonidoDeMuerte: {fileID: 8430043934063190247}
 --- !u!82 &8430043934063190245
 AudioSource:
   m_ObjectHideFlags: 0
@@ -515,3 +518,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8064131146528254494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8430043934063190226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470076e9551733f41890572e7995273e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextoDeTiempo: {fileID: 0}
+  FinishLine: {fileID: 6522084742115429882, guid: 070fe625747d662408611e69b7238abf, type: 3}
+--- !u!114 &3891425534079498811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8430043934063190226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5bb92ee292ec84385525d7feef67d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedText: {fileID: 0}

@@ -379,7 +379,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit game
+  m_Text: Salir del juego
 --- !u!222 &552644781
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -614,7 +614,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Thanks for playing
+  m_Text: Gracias por jugar
 --- !u!1 &1005986648
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,9 +765,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Game over
-
-'
+  m_Text: Juego terminado
 --- !u!222 &1363691420
 CanvasRenderer:
   m_ObjectHideFlags: 0

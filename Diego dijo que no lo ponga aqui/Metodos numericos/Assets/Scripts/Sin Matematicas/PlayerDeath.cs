@@ -5,16 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
+    //Estos son los variables del personaje y de la animacion de muerte
     private Rigidbody2D rb;
-    private Animator anim;
+    private Animator animacion;
 
-    [SerializeField] private AudioSource Deathsoundeffect;
+    [SerializeField] private AudioSource SonidoDeMuerte;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        animacion = GetComponent<Animator>();
     }
 
+    // Esto controla la animacion de la muerte y reinicia el nivel
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Trap"))
@@ -25,8 +27,8 @@ public class PlayerDeath : MonoBehaviour
     private void Die()
     {
         rb.bodyType = RigidbodyType2D.Static;
-        anim.SetTrigger("Death");
-        Deathsoundeffect.Play();
+        animacion.SetTrigger("Death");
+        SonidoDeMuerte.Play();
     }
     private void RestartLevel()
     {

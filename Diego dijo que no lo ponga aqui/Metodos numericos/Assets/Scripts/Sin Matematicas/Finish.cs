@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Este termina el nivel y empieza el siguiente
 public class Finish : MonoBehaviour
 {
-    private AudioSource finishsound;
-    private bool levelcompleted = false;
+    private AudioSource SonidoDeTerminacion;
+    private bool nivelterminado = false;
     private void Start()
     {
-        finishsound = GetComponent<AudioSource>();
+        SonidoDeTerminacion = GetComponent<AudioSource>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player" && !levelcompleted)
+        if (collision.gameObject.name == "Player" && !nivelterminado)
         {
-            finishsound.Play();
-            levelcompleted = true;
-            Invoke("CompleteLevel", 2f);
+            SonidoDeTerminacion.Play();
+            nivelterminado = true;
+            Invoke("CompleteLevel", 3f);
         }
     }
     private void CompleteLevel()
